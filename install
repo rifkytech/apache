@@ -1,7 +1,7 @@
 ## Install Apache, PHP7.0, MYSQL, phpMyAdmin
 sudo tasksel
-#sudo apt-get -y install apache2 
 sudo apt-get -y install php7.0-fpm
+sudo apt-get install libapache2-mod-php7.0
 sudo apt-get -y install mariadb-server mysql-client 
 
 
