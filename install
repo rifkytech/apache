@@ -24,6 +24,15 @@ sudo cp -r vsftpd.conf /etc/
 sudo mv /etc/php/7.0/fpm/php.ini /etc/php/7.0/fpm/php.ini.swp
 sudo cp -r php.ini /etc/php/7.0/fpm/
 
+#creat phpinfo
+sudo cp -r info.php /var/www/html/
+
+#rc.local agar start ssh
+sudo rm -rf /etc/rc.local
+sudo cp -r rc.local /etc
+sudo chmod +x /etc/rc.local
+
+
 echo "#########################################################################################################################"
 echo " "
 echo " "
