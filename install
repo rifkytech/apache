@@ -1,3 +1,4 @@
+## Install Apache, PHP7.0, MYSQL, phpMyAdmin
 sudo apt-get -y install apache php7.0 mariadb-server mysql-client phpmyadmin
 a2enconf php7.0-fpm
 sudo a2enconf php7.0-fpm
