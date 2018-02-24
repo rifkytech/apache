@@ -1,0 +1,11 @@
+sudo apt-get -y install apache php7.0 mariadb-server mysql-client phpmyadmin
+a2enconf php7.0-fpm
+sudo a2enconf php7.0-fpm
+sudo service apache2 reload
+sudo a2enmod proxy_fcgi setenvif
+sudo service apache2 reload
+sudo mysql_service_installation
+
+sudo su
+sudo reboot
+
