@@ -5,7 +5,33 @@ sudo service apache2 reload
 sudo a2enmod proxy_fcgi setenvif
 sudo service apache2 reload
 sudo mysql_service_installation
-
+echo "#########################################################################################################################"
+echo " "
+echo " "
+echo " "
+echo " Langkah ini harus dilakukan, yaitu 
+      - masuk sebagai root, lalu ketik "mysql -u root"
+      - masukan perintah berikut di mysql :
+      
+      use mysql;
+      update user set plugin='' where User='root';
+      flush privileges;
+      exit;
+      jika sudah, berikut list tested nya :
+      - http://localhost/info.php <-- untuk cek bahwa php telah terinstall
+      - http://localhost/phpmyadmin <-- untuk cek bahwa phpmyadmin telah terinstall
+      
+      Login phpmyadmin nya gunakan :
+      user : root
+      pass : (sesuai dengan kamu buat)
+     
+     "  
+      
+echo "Terima Kasih,.. Menemukan Error Perintah ? send feedback : saya@rifky.tech"
+echo " "
+echo " "
+echo " "
+echo "#########################################################################################################################"
 sudo su
 sudo reboot
 
