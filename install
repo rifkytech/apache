@@ -1,11 +1,18 @@
 ## Install Apache, PHP7.0, MYSQL, phpMyAdmin
-sudo apt-get -y install apache php7.0 mariadb-server mysql-client phpmyadmin
-a2enconf php7.0-fpm
+sudo apt-get -y install apache2 
+sudo apt-get -y install php7.0 
+sudo apt-get -y install mariadb-server mysql-client 
+sudo apt-get -y install phpmyadmin
+
+#Aktifkan PHP7
 sudo a2enconf php7.0-fpm
 sudo service apache2 reload
 sudo a2enmod proxy_fcgi setenvif
 sudo service apache2 reload
+
+# Set Password Mysql
 sudo mysql_service_installation
+
 echo "#########################################################################################################################"
 echo " "
 echo " "
@@ -18,6 +25,8 @@ echo " Langkah ini harus dilakukan, yaitu
       update user set plugin='' where User='root';
       flush privileges;
       exit;
+      
+      
       jika sudah, berikut list tested nya :
       - http://localhost/info.php <-- untuk cek bahwa php telah terinstall
       - http://localhost/phpmyadmin <-- untuk cek bahwa phpmyadmin telah terinstall
@@ -34,5 +43,3 @@ echo " "
 echo " "
 echo "#########################################################################################################################"
 sudo chmod 755 hapus
-sudo su
-sudo reboot
