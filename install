@@ -2,6 +2,29 @@
 sudo apt-get -y install apache2 
 sudo apt-get -y install php7.0-fpm 
 sudo apt-get -y install mariadb-server mysql-client 
+
+
+
+
+echo "#########################################################################################################################"
+echo " "
+echo " "
+echo " "
+echo " Pada Install phpmyadmin, berikut ada 2 pilihan opsi :
+              - pada opsi (Web Server to reconfigure automatically) : <-- Kosongkan
+              Saja Dengan Menekan TAB lalu Ok
+              - pada opsi (Configure database for phpmyadmin with dbconfig-common) <--Pilih
+              No "
+
+echo " "
+echo " "
+echo " "
+echo "#########################################################################################################################"
+
+
+
+
+
 sudo apt-get -y install phpmyadmin
 
 #Aktifkan PHP7
