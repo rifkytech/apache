@@ -10,10 +10,6 @@ sudo service apache2 reload
 sudo a2enmod proxy_fcgi setenvif
 sudo service apache2 reload
 
-# Set Password Mysql
-sudo mysql_service_installation
-
-
 #Install vsftpd
 sudo chown -R pi /var/www/html/
 sudo apt-get -y install vsftpd
@@ -31,6 +27,9 @@ sudo cp -r info.php /var/www/html/
 sudo rm -rf /etc/rc.local
 sudo cp -r rc.local /etc
 sudo chmod +x /etc/rc.local
+
+# Set Password Mysql
+sudo mysql_secure_installation
 
 
 echo "#########################################################################################################################"
