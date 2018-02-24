@@ -13,6 +13,17 @@ sudo service apache2 reload
 # Set Password Mysql
 sudo mysql_service_installation
 
+
+#Install vsftpd
+sudo chown -R pi /var/www/html/
+sudo apt-get -y install vsftpd
+sudo rm -rf /etc/vsftpd.conf
+sudo cp -r vsftpd.conf /etc/
+
+#Konfigurasi php.ini
+sudo mv /etc/php/7.0/fpm/php.ini /etc/php/7.0/fpm/php.ini.swp
+sudo cp -r php.ini /etc/php/7.0/fpm/
+
 echo "#########################################################################################################################"
 echo " "
 echo " "
