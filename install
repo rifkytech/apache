@@ -43,8 +43,6 @@ sudo cp -r vsftpd.conf /etc/
 #Konfigurasi php.ini
 sudo mv /etc/php/7.0/fpm/php.ini /etc/php/7.0/fpm/php.ini.swp
 sudo cp -r php.ini /etc/php/7.0/fpm/
-sudo mv /etc/php/7.0/apache2/php.ini /etc/php/7.0/apache2/php.ini.swp
-sudo cp -r php.ini /etc/php/7.0/apache2/
 
 #creat phpinfo
 sudo cp -r info.php /var/www/html/
