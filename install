@@ -1,5 +1,12 @@
+#!/bin/bash
 ## Install Apache, PHP7.0, MYSQL, phpMyAdmin
+## Sys Admin Muhammad Rifky Abimayu 
+## Error Code? Call saya@rifky.tech
+
+# Install Apache Web Server Use Taksel
 sudo tasksel
+
+# Install PHP, Mysql, Libapache2, dan phpMyAdmin
 sudo apt-get -y install php7.0-fpm
 sudo apt-get install libapache2-mod-php7.0
 sudo apt-get -y install mariadb-server mysql-client 
@@ -12,8 +19,8 @@ echo " "
 echo " "
 echo " "
 echo " Pada Install phpmyadmin, berikut ada 2 pilihan opsi :
-              - pada opsi (Web Server to reconfigure automatically) : <-- Kosongkan
-              Saja Dengan Menekan TAB lalu Ok
+              - pada opsi (Web Server to reconfigure automatically) : <--Pilih Apache
+              dan Menekan TAB lalu Ok
               - pada opsi (Configure database for phpmyadmin with dbconfig-common) <--Pilih
               No "
 
@@ -28,28 +35,29 @@ echo "##########################################################################
 
 sudo apt-get -y install phpmyadmin
 
-#Aktifkan PHP7
+# Mengaktifkan Modul PHP7.0
+
 sudo a2enconf php7.0-fpm
 sudo service apache2 reload
 sudo a2enmod proxy_fcgi setenvif
 sudo service apache2 reload
 
-#Install vsftpd
+# Konfigurasi & Install vsftpd
 sudo chown -R pi /var/www/html/
 sudo apt-get -y install vsftpd
 sudo rm -rf /etc/vsftpd.conf
 sudo cp -r vsftpd.conf /etc/
 
-#Konfigurasi php.ini
+# Konfigurasi php.ini
 sudo mv /etc/php/7.0/fpm/php.ini /etc/php/7.0/fpm/php.ini.swp
 sudo cp -r php.ini /etc/php/7.0/fpm/
 sudo mv /etc/php/7.0/apache2/php.ini /etc/php/7.0/apache2/php.ini.swp
 sudo cp -r php2.ini /etc/php/7.0/apache2/php.ini
 
-#creat phpinfo
+# Creat phpinfo
 sudo cp -r info.php /var/www/html/
 
-#rc.local agar start ssh
+# Konfigurasi rc.local agar start ssh
 sudo rm -rf /etc/rc.local
 sudo cp -r rc.local /etc
 sudo chmod +x /etc/rc.local
