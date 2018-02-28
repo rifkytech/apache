@@ -17,8 +17,8 @@ dan versi tingkat atas nya,
 Persiapan Sebelum Instalasi, Install dahulu git dengan <code>sudo apt-get install git</code>
 Setelah Itu  :
 
-1. instalasi cukup dengan <code>git clone https://github.com/rifkytech/lampp.git</code>
-2. Kemudian <code>cd lampp</code>
+1. instalasi cukup dengan <code>git clone https://github.com/rifkytech/apache.git</code>
+2. Kemudian <code>cd apache</code>
 3. setelah itu <code>chmod 755 install</code>
 4. nah selesai, untuk install nginx nya, cukup dengan perintah <code>./install</code>
 
