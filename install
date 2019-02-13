@@ -4,7 +4,7 @@
 ## Error Code? Call saya@rifky.tech
 
 # Install Apache Web Server Use Taksel
-sudo tasksel
+sudo tasksel apache
 
 # Install PHP, Mysql, Libapache2, dan phpMyAdmin
 sudo apt-get -y install php7.0-fpm
@@ -28,7 +28,7 @@ echo " "
 echo " "
 echo " "
 echo "#########################################################################################################################"
-
+sleep 5s
 
 
 
