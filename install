@@ -3,6 +3,9 @@
 ## Sys Admin Muhammad Rifky Abimayu 
 ## Error Code? Call saya@rifky.tech
 
+echo -n " Detection OS : " ; lsb_release -ds
+sleep 3s
+
 # Install Apache Web Server Use Taksel
 sudo tasksel apache
 
